@@ -109,17 +109,17 @@
     <Compile Include="Config.cs" />
     <Compile Include="IConfig.cs" />
     <Compile Include="IReportGenerator.cs" />
-    <Compile Include="Service\ProjectInstaller.cs">
+    <Compile Include="ServiceInstaller\ProjectInstaller.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Service\ProjectInstaller.Designer.cs">
+    <Compile Include="ServiceInstaller\ProjectInstaller.Designer.cs">
       <DependentUpon>ProjectInstaller.cs</DependentUpon>
     </Compile>
     <Compile Include="ReportGenerator.cs" />
-    <Compile Include="Service\ReportGeneratorService.cs">
+    <Compile Include="ServiceInstaller\ReportGeneratorService.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Service\ReportGeneratorService.Designer.cs">
+    <Compile Include="ServiceInstaller\ReportGeneratorService.Designer.cs">
       <DependentUpon>ReportGeneratorService.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
@@ -134,12 +134,17 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Service\ProjectInstaller.resx">
+    <EmbeddedResource Include="ServiceInstaller\ProjectInstaller.resx">
       <DependentUpon>ProjectInstaller.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Service\ReportGeneratorService.resx">
+    <EmbeddedResource Include="ServiceInstaller\ReportGeneratorService.resx">
       <DependentUpon>ReportGeneratorService.cs</DependentUpon>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="dlls\PowerService.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

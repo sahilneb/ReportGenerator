@@ -4,10 +4,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.IO;
 using CsvHelper;
-using System.Text;
 using System.Globalization;
 using System.Threading.Tasks;
-using System.Timers;
 using log4net;
 
 namespace ReportGenerator

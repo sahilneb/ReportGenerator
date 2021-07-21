@@ -1,7 +1,6 @@
 ﻿using Services;
 using System;
 using System.Configuration;
-using System.Linq;
 using System.ServiceProcess;
 using System.Threading;
 using System.Threading.Tasks;
